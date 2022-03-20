@@ -6,7 +6,7 @@ output_dir: "_site"
 navbar:
   logo:
     image: logos/leaf logo 2.png
-    href: 
+    href: about.html
     search: false
   right:
     - text: "Home"
