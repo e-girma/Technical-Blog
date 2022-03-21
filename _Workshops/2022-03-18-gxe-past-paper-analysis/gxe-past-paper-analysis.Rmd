@@ -10,12 +10,10 @@ output:
     self_contained: false
 ---
 
+[Slides](https://drive.google.com/file/d/1LgVri_-f8JwH5cV9G_cj22qAGFSS0W0S/view?usp=sharing)
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
-
-
-
-
 
