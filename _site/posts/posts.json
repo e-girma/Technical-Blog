@@ -32,39 +32,5 @@
     "preview": {},
     "last_modified": "2022-03-18T15:13:22+03:00",
     "input_file": {}
-  },
-  {
-    "path": "posts/2022-03-17-my-new-post/",
-    "title": "New Post",
-    "description": "This post will cover how to basics for new posts using distill.",
-    "author": [
-      {
-        "name": "Ellena Girma",
-        "url": "https://example.com/ellenagirma"
-      }
-    ],
-    "date": "2022-03-17",
-    "categories": [],
-    "contents": "\r\n\r\n\r\n\r\nwhat a nice package[@refmanager] built on top of R[@my-citation-key-for-r]. Bibliography thing is not working and I don’t know how.\r\nWhen \\(a \\ne 0\\), there are two solutions to \\(ax^2 + bx + c = 0\\) and they are \\[x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}.\\]\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-03-18T14:40:59+03:00",
-    "input_file": {}
-  },
-  {
-    "path": "posts/welcome/",
-    "title": "Welcome to Blog Trial 1 ",
-    "description": "Welcome to our new blog, Blog Trial 1 . We hope you enjoy \nreading what we have to say!",
-    "author": [
-      {
-        "name": "Ellena Girma",
-        "url": "https://example.com/ellenagirma"
-      }
-    ],
-    "date": "2022-03-16",
-    "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-03-18T15:27:24+03:00",
-    "input_file": {}
   }
 ]

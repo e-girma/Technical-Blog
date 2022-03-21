@@ -1,7 +1,17 @@
 ---
 title: "About Me"
+image: "leaf logo 3_3.png"
 description: |
     Blog to document R learning in the field of Plant Breeding.
+links: 
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/ellena-girma-90a42719b/"
+  - label: Github
+    url: "https://github.com/e-girma"
+  - label: Portfolio
+    url: ""
+output: 
+  postcards::jolla
 ---
 
 ```{r setup, include=FALSE}

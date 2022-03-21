@@ -2,8 +2,6 @@
 title: "Resources"
 description: |
  Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodeiversity. 
-site: distill::distill_website
-listing: Resources
+listing: resources
 ---
-
 

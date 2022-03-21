@@ -2,6 +2,5 @@
 title: "Workshops"
 description: |
   Here are the resources and learning materials for the workshops I've hosted at CIAT. 
-site: distill::distill_website
-listing: Workshops
+listing: workshops
 ---
