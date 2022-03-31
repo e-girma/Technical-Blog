@@ -1,6 +1,6 @@
 ---
 title: "Blog Posts"
-image: "leaf logo 2_3.png"
+image: "leaf logo 3_3.png"
 site: distill::distill_website
 listing: posts
 ---

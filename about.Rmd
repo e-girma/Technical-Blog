@@ -1,6 +1,5 @@
 ---
 title: "About Me"
-image: "leaf logo 3_3.png"
 description: |
     Blog to document R learning in the field of Plant Breeding.
 links: 
