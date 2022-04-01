@@ -5,9 +5,6 @@ description: |
   Technical Writing Blog to document R langauge learning in the field of Plant Breeding. My aim is for this to reflect what I've learnt in my time as a data analyst intern at CIAT Arusha and to share my knowledge with my  colleagues.
 output_dir: "_site"
 navbar:
-  logo:
-    image: logos/leaf logo 2_3.png
-    href: about.html
   search: false
   right:
     - text: "Home"
