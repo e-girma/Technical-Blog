@@ -6,7 +6,7 @@ description: |
 output_dir: "_site"
 navbar:
   logo:
-    image: logos/leaf logo 3_3.png
+    image: logos/leaf logo 2_3.png
     href: about.html
   search: false
   right:
@@ -18,7 +18,6 @@ navbar:
       href: workshops.html
     - text: "Resources"
       href: resources.html
-    -
     
 output: distill::distill_article
 citations: true
