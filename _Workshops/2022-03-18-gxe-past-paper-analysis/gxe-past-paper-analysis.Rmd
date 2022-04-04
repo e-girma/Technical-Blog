@@ -1,7 +1,8 @@
 ---
 title: "GxE Past Paper Summary & Analysis"
 description: |
-  I did a summary & analysis on a past paper that covered GxE Interaction and Stability in Three Agro-ecologies in Tanzania. I presented the summary & analysis to Dr. Teshale and interns Leah, Ombeni and Anne. 
+  A summary & analysis of a past paper on GxE Interaction and Stability in Three Agro-ecologies in Tanzania presented to Dr. Teshale and fellow interns Leah, Ombeni, and Anne.
+draft: true
 author:
   - name: Ellena Girma
 date: 2022-03-18
@@ -11,9 +12,3 @@ output:
 ---
 
 [Slides](https://drive.google.com/file/d/1LgVri_-f8JwH5cV9G_cj22qAGFSS0W0S/view?usp=sharing)
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
-
