@@ -34,7 +34,7 @@ html {
   --heading-font:   "Libre Baskerville", serif;
   --mono-font:       monospace;
   --body-font:       "Lato", sans-serif;
-  --navbar-font:     "Lato", sans-serif;  /* websites + blogs only */
+  --navbar-font:     "Libre Baskerville", serif;  /* websites + blogs only */
 }
 
 /*-- ARTICLE METADATA --*/
@@ -63,9 +63,9 @@ d-appendix {
 /* These properties only apply to Distill sites and blogs  */
 
 .distill-site-header {
-  --title-size:       20px;
+  --title-size:       18px;
   --text-color:       rgba(11, 61, 44, 1);
-  --text-size:        15px;
+  --text-size:        16px;
   --hover-color:      rgba(18, 99, 72, 1);
   --bkgd-color:       white;
 }
