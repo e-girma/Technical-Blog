@@ -6,7 +6,7 @@
       "description": "Blog goals and my background.\n",
       "author": [],
       "contents": "\r\n\r\n          \r\n          \r\n          R For Plant Breeders\r\n          \r\n          \r\n          About\r\n          Blog\r\n          Workshops\r\n          Resources\r\n          \r\n          \r\n          \r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Ellena Girma\r\n            \r\n            \r\n              \r\n                \r\n                    \r\n                      \r\n                        LinkedIn\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Github\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Portfolio\r\n                      \r\n                    \r\n                  \r\n                                  \r\n            \r\n          \r\n        \r\n        \r\n        \r\n          \r\n            I am a data analyst intern at The International Center for Tropical Agriculture(CIAT) in Arusha, Tanzania. In this role, I primarily work on projects that deal with agrobiodiversity for the common bean. I created this blog to have a central place to share what I have learned in this role. I also wanted to create a resource for my colleagues who want to learn how to use R for plant breeding.\r\n            I graduated from La Salle University in Philadelphia in 2021 with a B.S. in Integrated Science Business & Technology (ISBT). Being an ISBT major taught me to view my skillset as a toolbox and use various tools from different fields to solve a problem. As I discovered more skills to add to my toolbox, I found data visualization. I was immediately interested in learning how to visualize and share scientific work in a clear & concise manner. In exploring data viz, I made my way into the broader field of data science and analytics.\r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              Ellena Girma\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Github\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Portfolio\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              I am a data analyst intern at The International Center for Tropical Agriculture(CIAT) in Arusha, Tanzania. In this role, I primarily work on projects that deal with agrobiodiversity for the common bean. I created this blog to have a central place to share what I have learned in this role. I also wanted to create a resource for my colleagues who want to learn how to use R for plant breeding.\r\n              I graduated from La Salle University in Philadelphia in 2021 with a B.S. in Integrated Science Business & Technology (ISBT). Being an ISBT major taught me to view my skillset as a toolbox and use various tools from different fields to solve a problem. As I discovered more skills to add to my toolbox, I found data visualization. I was immediately interested in learning how to visualize and share scientific work in a clear & concise manner. In exploring data viz, I made my way into the broader field of data science and analytics.\r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
-      "last_modified": "2022-04-04T13:28:58+03:00"
+      "last_modified": "2022-04-04T14:18:23+03:00"
     },
     {
       "path": "index.html",
@@ -14,7 +14,7 @@
       "description": "Blog Posts Page",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-04T13:53:25+03:00"
+      "last_modified": "2022-04-04T14:18:35+03:00"
     },
     {
       "path": "resources.html",
@@ -30,7 +30,7 @@
       "description": "Here are the resources and learning materials for the workshops I've hosted at CIAT. \n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-04T13:53:41+03:00"
+      "last_modified": "2022-04-04T14:17:55+03:00"
     }
   ],
   "collections": ["posts/posts.json", "resources/resources.json", "workshops/workshops.json"]
