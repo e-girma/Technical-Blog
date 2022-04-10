@@ -89,27 +89,27 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>R For Plant Breeders: Resources</title>
 
-  <meta property="description" itemprop="description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodeiversity."/>
+  <meta property="description" itemprop="description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodiversity."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="R For Plant Breeders: Resources"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodeiversity."/>
+  <meta property="og:description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodiversity."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="R For Plant Breeders"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="R For Plant Breeders: Resources"/>
-  <meta property="twitter:description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodeiversity."/>
+  <meta property="twitter:description" content="Here are links to outside resources I&#39;ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodiversity."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","listing"]}},"value":[{"type":"character","attributes":{},"value":["Resources"]},{"type":"character","attributes":{},"value":["Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodeiversity. \n"]},{"type":"character","attributes":{},"value":["resources"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Resources"]},{"type":"character","attributes":{},"value":["Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodiversity.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -1876,7 +1876,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   html {
     /*-- Main font sizes --*/
-    --title-size:      100px;
+    --title-size:      40px;
     --body-size:       1.06rem;
     --code-size:       14px;
     --aside-size:      12px;
@@ -2110,12 +2110,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Resources","description":"Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodeiversity.","authors":[]}
+{"title":"Resources","description":"Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodiversity.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2140,158 +2140,50 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-apply-limit l-page">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Resources">Resources</h1>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
 <h1>Resources</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Here are links to outside resources I’ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodeiversity.</p></p>
+<p><p>Here are links to outside resources I’ve found helpful as I learn how to use R for Plant Breeding &amp; agrobiodiversity.</p></p>
 </div>
 
 
 <div class="d-article">
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#setting-up-r">Setting Up R</a>
+<ul>
+<li><a href="#downloading-r-rstudio">Downloading R &amp; RStudio</a></li>
+<li><a href="#r-studios-interface">R Studio’s Interface</a></li>
+</ul></li>
+<li><a href="#using-r-basics">Using R: Basics</a>
+<ul>
+<li><a href="#general-resources">General Resources</a></li>
+<li><a href="#package-specific-resources">Package Specific Resources</a></li>
+</ul></li>
+</ul>
+</nav>
+</div>
+<h2 id="setting-up-r">Setting Up R</h2>
+<p>Downloading new software or programs can be an overwhelming task. This page has some resources that can help you get R set up.</p>
+<h3 id="downloading-r-rstudio">Downloading R &amp; RStudio</h3>
+<p>It is recommended that you use R on RStudio’s environment. So you will need to download both R and RStudio. A great video resource that takes you through the setup is Shashank Kalanithi’s Data Analyst Setup for Productivity (Python, R, SQL). Minutes <a href="https://youtu.be/LwazHUkU5IQ?t=1363">22:40 - 25:00</a> are what you’ll want to watch to set up your R environment.</p>
+<h3 id="r-studios-interface">R Studio’s Interface</h3>
+<p>R Studio has four windows that help organize your view as you work through your data analysis process. To get familiar with RStudio’s interface, I suggest watching <a href="https://youtu.be/FIrsOBy5k58">RStudio for the Total Beginner</a>. The tutorial focuses on how to navigate to and use each window.</p>
+<h2 id="using-r-basics">Using R: Basics</h2>
+<p>Since most of my blog posts will be about using R for plant breeding specifically, I wanted to share some external resources that you can use to get more familiar with R functions and uses.</p>
+<h3 id="general-resources">General Resources</h3>
+<ul>
+<li><a href = "https://www.rdocumentation.org"> RDocumentation </a> is a great site to search up R packages and functions.</li>
+<li><a href = "https://www.rstudio.com/resources/cheatsheets/"> RStudio Cheatsheets </a> shares downloadable cheatsheets for many widely used packages that will help you figure out what functions in that package do.</li>
+</ul>
+<h3 id="package-specific-resources">Package Specific Resources</h3>
+<ul>
+<li>Main page for the <a href = "https://ggplot2.tidyverse.org/"> ggplot2 </a> package.</li>
+</ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

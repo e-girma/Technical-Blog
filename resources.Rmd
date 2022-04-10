@@ -1,7 +1,40 @@
 ---
 title: "Resources"
 description: |
- Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodeiversity. 
-listing: resources
+ Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodiversity.
+ 
+output:
+  distill::distill_article:
+    toc: true
+    toc_depth: 4
 ---
+
+## Setting Up R 
+
+Downloading new software or programs can be an overwhelming task. This page has some resources that can help you get R set up. 
+
+### Downloading R & RStudio
+
+It is recommended that you use R on RStudio's environment. So you will need to download both R and RStudio. A great video resource that takes you through the setup is Shashank Kalanithi's Data Analyst Setup for Productivity (Python, R, SQL). Minutes  <a href="https://youtu.be/LwazHUkU5IQ?t=1363">22:40 - 25:00</a> are what you'll want to watch to set up your R environment. 
+
+### R Studio's Interface
+
+R Studio has four windows that help organize your view as you work through your data analysis process. To get familiar with RStudio's interface, I suggest watching <a href="https://youtu.be/FIrsOBy5k58">RStudio for the Total Beginner</a>. The tutorial focuses on how to navigate to and use each window. 
+
+
+## Using R: Basics
+
+Since most of my blog posts will be about using R for plant breeding specifically, I wanted to share some external resources that you can use to get more familiar with R functions and uses. 
+
+### General Resources
+
+ * <a href = "https://www.rdocumentation.org"> RDocumentation </a> is a great site to search up R packages and functions.
+ * <a href = "https://www.rstudio.com/resources/cheatsheets/"> RStudio Cheatsheets </a> shares downloadable cheatsheets for many widely used packages that will help you figure out what functions in that package do.
+
+### Package Specific Resources
+
+* Main page for the <a href = "https://ggplot2.tidyverse.org/"> ggplot2 </a> package. 
+
+
+
 
