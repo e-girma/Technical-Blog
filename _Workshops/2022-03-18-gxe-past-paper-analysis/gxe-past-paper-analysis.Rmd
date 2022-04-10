@@ -2,7 +2,7 @@
 title: "GxE Past Paper Summary & Analysis"
 description: |
   A summary & analysis of a past paper on GxE Interaction and Stability in Three Agro-ecologies in Tanzania presented to Dr. Teshale and fellow interns Leah, Ombeni, and Anne.
-draft: true
+#draft: true
 author:
   - name: Ellena Girma
 date: 2022-03-18
@@ -11,4 +11,8 @@ output:
     self_contained: false
 ---
 
-[Slides](https://drive.google.com/file/d/1LgVri_-f8JwH5cV9G_cj22qAGFSS0W0S/view?usp=sharing)
+### Workshop 1
+
+To learn more about GxE Interaction analysis, I picked a paper and did a summary presentation. I chose <a href = "https://www.sciencedirect.com/science/article/pii/S2405844021000785"> Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania </a> as it would give me a good understanding of common bean production and productivity in Tanzania. 
+
+Here is the <a href = "https://drive.google.com/file/d/1LgVri_-f8JwH5cV9G_cj22qAGFSS0W0S/view?usp=sharing"> slide deck </a> I made for the presentation. I presented this to Dr. Teshale and fellow colleagues Leah, Ombeni, and Anne. 
