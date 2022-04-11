@@ -112,7 +112,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","draft","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to R For Plant Breeding"]},{"type":"character","attributes":{},"value":["This blog post is to familiarize new users with R/RStudio's interface & tools followed by some fundamental data importing, cleaning and manipulation tips. \n"]},{"type":"logical","attributes":{},"value":[true]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ellena Girma"]},{"type":"character","attributes":{},"value":["https://example.com/ellenagirma"]}]}]},{"type":"character","attributes":{},"value":["2022-03-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Introduction to R For Plant Breeding"]},{"type":"character","attributes":{},"value":["This blog post is to familiarize new users with R/RStudio's interface & tools followed by some fundamental data importing, cleaning and manipulation tips. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ellena Girma"]},{"type":"character","attributes":{},"value":["https://example.com/ellenagirma"]}]}]},{"type":"character","attributes":{},"value":["2022-03-18"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained"]}},"value":[{"type":"logical","attributes":{},"value":[false]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -1482,7 +1482,182 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<h3 id="summary">Summary</h3>
+<p>Over the last year, I have been using R as my primary tool for data analysis. Since I’m interning at an agriculture research company, the main topic I work on is plant breeding. R is a great, open-source software for working with plant breeding data! In this blog post, I give a quick introduction to R for plant breeders.</p>
+<h3 id="installing-r-and-setting-up-r">Installing R and Setting Up R</h3>
+<p>I have some resources linked on my <a href = "https://rforplantbreeders.netlify.app/resources.html"> resources</a> page that will help you get R and RStudio set up. There are also some resources on getting yourself familiar with R Studio’s Interface.</p>
+<p>When you are ready to start working on your data, you should set your working directory to the folder where you have your data saved. Setting your working directory to this folder will also allow you to easily save any output files (like plots) to the same folder.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#set working directory </span>
+
+<span class='co'>#setwd("C:/Users/eruph/Desktop/Research_CIAT")</span>
+
+<span class='co'>#check working directory</span>
+<span class='fu'><a href='https://rdrr.io/r/base/getwd.html'>getwd</a></span><span class='op'>(</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;C:/Users/eruph/Documents/Technical Blog_EG/Technical-Blog/_posts/2022-03-18-introduction-to-r-for-plant-breeding&quot;</code></pre>
+</div>
+<h3 id="packages">Packages</h3>
+<p>Packages in R Studio are how you will access the functions you want to use/run. There are two main things you have to do when you want to use an R package:</p>
+<ul>
+<li>Check if the package is installed; if not, install it</li>
+<li>Once installed, load the package</li>
+</ul>
+<p>There are two ways to install a package in R. The first way is by going to the ‘Packages’ tab on the bottom right window. The second way is to do it using code. Below is an example of installing and loading tidyverse, a collection of R packages.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#installing the tidyverse package</span>
+<span class='co'>#install.packages("tidyverse")</span>
+<span class='co'># Loading tidverse for the session</span>
+<span class='co'>#library(tidyverse)</span>
+</code></pre>
+</div>
+</div>
+<p>Some of the packages included in core tidyverse are:</p>
+<ul>
+<li><a href = "https://ggplot2.tidyverse.org/index.html"> ggplot2 </a>: package useful for creating graphics</li>
+<li><a href = "https://dplyr.tidyverse.org/"> dplyr </a>: good for data manipulation</li>
+<li><a href = "https://tidyr.tidyverse.org/"> tidyr </a>: cleaning data</li>
+<li><a href = "https://readr.tidyverse.org/"> readr </a>: reading rectangular data (each column is a variable and row is a record)</li>
+</ul>
+<p>Learn more about the tidyverse <a href = "https://www.tidyverse.org/packages/"> here </a>.</p>
+<h4 id="other-packages-you-should-consider-installing">Other Packages you should consider installing</h4>
+<ul>
+<li><a href = "https://github.com/TiagoOlivoto/metan"> metan </a> for multi-environmental data</li>
+<li><a href = "https://cran.r-project.org/web/packages/statgenGxE/vignettes/statgenGxE.html"> statgenGxE </a></li>
+<li><a href = "https://cran.r-project.org/web/packages/statgenSTA/vignettes/statgenSTA.html"> statgenSTA</a></li>
+<li><a href = "https://cran.r-project.org/web/packages/lme4/lme4.pdf">lme4 </a> for multi-level models</li>
+<li><a href = "https://zzlab.net/GAPIT/">gapit</a> for Genome Wide Association Study (GWAS) and Genomic Selection (GS)</li>
+</ul>
+<h3 id="programming">Programming</h3>
+<h4 id="basic-arithmetic">Basic Arithmetic</h4>
+<p>You can run mathematical operations &amp; functions, logs, and exponentials, trig functions. Below are some examples. When you run each line of code, the answer will be shown in the console window (bottom left window) of RStudio’s interface.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fl'>12</span> <span class='op'>+</span> <span class='fl'>2</span> <span class='co'>#addition</span>
+</code></pre>
+</div>
+<pre><code>[1] 14</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fl'>12</span> <span class='op'>-</span> <span class='fl'>2</span> <span class='co'>#subtraction</span>
+</code></pre>
+</div>
+<pre><code>[1] 10</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fl'>12</span> <span class='op'>*</span> <span class='fl'>2</span> <span class='co'>#multiplication</span>
+</code></pre>
+</div>
+<pre><code>[1] 24</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fl'>12</span> <span class='op'>/</span> <span class='fl'>2</span> <span class='co'>#division</span>
+</code></pre>
+</div>
+<pre><code>[1] 6</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fl'>12</span> <span class='op'>^</span> <span class='fl'>2</span> <span class='co'>#exponentiation</span>
+</code></pre>
+</div>
+<pre><code>[1] 144</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log2</a></span><span class='op'>(</span><span class='fl'>16</span><span class='op'>)</span> <span class='co'>#log</span>
+</code></pre>
+</div>
+<pre><code>[1] 4</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>16</span><span class='op'>)</span> <span class='co'>#square root</span>
+</code></pre>
+</div>
+<pre><code>[1] 4</code></pre>
+</div>
+<h4 id="assigning-values-to-variables">Assigning values to variables</h4>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='va'>Operation_1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>16</span><span class='op'>)</span>
+
+<span class='va'>PlantGrowth</span> <span class='op'>&lt;-</span> <span class='fu'>datasets</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/r/datasets/PlantGrowth.html'>PlantGrowth</a></span>
+</code></pre>
+</div>
+</div>
+<h4 id="data-types-and-structures">Data Types and Structures</h4>
+<h5 id="data-types">Data Types</h5>
+<ul>
+<li>character: “words”</li>
+<li>numeric: 12, 4.5</li>
+<li>integer: 2</li>
+<li>logical: TRUE, FALSE</li>
+<li>complex: 1 + 4i</li>
+</ul>
+<p>To check the data type of a saved object, column, or columns in the entire dataset use the functions below:</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#loading example data from datasets base r</span>
+<span class='fu'>datasets</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/r/datasets/PlantGrowth.html'>PlantGrowth</a></span>
+</code></pre>
+</div>
+<pre><code>   weight group
+1    4.17  ctrl
+2    5.58  ctrl
+3    5.18  ctrl
+4    6.11  ctrl
+5    4.50  ctrl
+6    4.61  ctrl
+7    5.17  ctrl
+8    4.53  ctrl
+9    5.33  ctrl
+10   5.14  ctrl
+11   4.81  trt1
+12   4.17  trt1
+13   4.41  trt1
+14   3.59  trt1
+15   5.87  trt1
+16   3.83  trt1
+17   6.03  trt1
+18   4.89  trt1
+19   4.32  trt1
+20   4.69  trt1
+21   6.31  trt2
+22   5.12  trt2
+23   5.54  trt2
+24   5.50  trt2
+25   5.37  trt2
+26   5.29  trt2
+27   4.92  trt2
+28   6.15  trt2
+29   5.80  trt2
+30   5.26  trt2</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#structure of dataset</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='va'>PlantGrowth</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>&#39;data.frame&#39;:   30 obs. of  2 variables:
+ $ weight: num  4.17 5.58 5.18 6.11 4.5 4.61 5.17 4.53 5.33 5.14 ...
+ $ group : Factor w/ 3 levels &quot;ctrl&quot;,&quot;trt1&quot;,..: 1 1 1 1 1 1 1 1 1 1 ...</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#object class</span>
+<span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span><span class='op'>(</span><span class='va'>PlantGrowth</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;data.frame&quot;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#object storage mode</span>
+<span class='fu'><a href='https://rdrr.io/r/base/typeof.html'>typeof</a></span><span class='op'>(</span><span class='va'>PlantGrowth</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;list&quot;</code></pre>
+</div>
+<h5 id="data-structures">Data Structures</h5>
+<ul>
+<li>vector</li>
+<li>factor</li>
+<li>data frame</li>
+<li>matrix</li>
+<li>list</li>
+</ul>
+<p>R is a great tool that more plant breeders can use to conduct their analysis. R can be used to explore your data before performing more specific analysis. You can easily get descriptive statistics or make exploratory plots to show data distribute or variance. You can also conduct Analysis of Variance (ANOVA), Principal Component Analysis (PCA), and create AMMI Biplots &amp; GGE Biplots.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

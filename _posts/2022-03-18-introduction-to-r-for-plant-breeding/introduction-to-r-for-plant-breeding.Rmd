@@ -2,8 +2,6 @@
 title: "Introduction to R For Plant Breeding"
 description: |
   This blog post is to familiarize new users with R/RStudio's interface & tools followed by some fundamental data importing, cleaning and manipulation tips. 
-
-draft: true
 author:
   - name: Ellena Girma
     url: https://example.com/ellenagirma
@@ -12,4 +10,132 @@ output:
   distill::distill_article:
     self_contained: false
 ---
+
+### Summary
+
+Over the last year, I have been using R as my primary tool for data analysis. Since I'm interning at an agriculture research company, the main topic I work on is plant breeding. R is a great, open-source software for working with plant breeding data! In this blog post, I give a quick introduction to R for plant breeders.
+ 
+### Installing R and Setting Up R
+
+I have some resources linked on my <a href = "https://rforplantbreeders.netlify.app/resources.html"> resources</a> page that will help you get R and RStudio set up. There are also some resources on getting yourself familiar with R Studio's Interface. 
+
+When you are ready to start working on your data, you should set your working directory to the folder where you have your data saved. Setting your working directory to this folder will also allow you to easily save any output files (like plots) to the same folder. 
+
+```{r}
+#set working directory 
+
+#setwd("C:/Users/eruph/Desktop/Research_CIAT")
+
+#check working directory
+getwd()
+
+```
+
+ 
+### Packages 
+
+Packages in R Studio are how you will access the functions you want to use/run. There are two main things you have to do when you want to use an R package:
+ 
+* Check if the package is installed; if not, install it
+* Once installed, load the package 
+
+There are two ways to install a package in R. The first way is by going to the 'Packages' tab on the bottom right window. The second way is to do it using code. Below is an example of installing and loading tidyverse, a collection of R packages.
+
+```{r}
+#installing the tidyverse package
+#install.packages("tidyverse")
+# Loading tidverse for the session
+#library(tidyverse)
+
+```
+
+
+Some of the packages included in core tidyverse are: 
+
+* <a href = "https://ggplot2.tidyverse.org/index.html"> ggplot2 </a>: package useful for creating graphics
+* <a href = "https://dplyr.tidyverse.org/"> dplyr </a>: good for data manipulation
+* <a href = "https://tidyr.tidyverse.org/"> tidyr </a>: cleaning data 
+* <a href = "https://readr.tidyverse.org/"> readr </a>: reading rectangular data (each column is a variable and row is a record)
+
+Learn more about the tidyverse <a href = "https://www.tidyverse.org/packages/"> here </a>. 
+
+#### Other Packages you should consider installing 
+
+* <a href = "https://github.com/TiagoOlivoto/metan"> metan </a> for multi-environmental data 
+* <a href = "https://cran.r-project.org/web/packages/statgenGxE/vignettes/statgenGxE.html"> statgenGxE </a> 
+* <a href = "https://cran.r-project.org/web/packages/statgenSTA/vignettes/statgenSTA.html"> statgenSTA</a> 
+* <a href = "https://cran.r-project.org/web/packages/lme4/lme4.pdf">lme4 </a> for multi-level models 
+* <a href = "https://zzlab.net/GAPIT/">gapit</a> for Genome Wide Association Study (GWAS) and Genomic Selection (GS)
+
+### Programming 
+
+#### Basic Arithmetic
+
+You can run mathematical operations & functions, logs, and exponentials, trig functions. Below are some examples. When you run each line of code, the answer will be shown in the console window (bottom left window) of RStudio's interface.
+
+```{r}
+12 + 2 #addition
+12 - 2 #subtraction
+12 * 2 #multiplication
+12 / 2 #division
+12 ^ 2 #exponentiation
+log2(16) #log
+sqrt(16) #square root
+
+```
+
+
+#### Assigning values to variables
+
+```{r}
+Operation_1 <- sqrt(16)
+
+PlantGrowth <- datasets::PlantGrowth
+```
+
+
+
+#### Data Types and Structures 
+##### Data Types
+
+* character: "words"
+* numeric: 12, 4.5
+* integer: 2
+* logical: TRUE, FALSE
+* complex: 1 + 4i 
+
+To check the data type of a saved object, column, or columns in the entire dataset use the functions below: 
+
+```{r}
+#loading example data from datasets base r
+datasets::PlantGrowth
+
+#structure of dataset
+str(PlantGrowth)
+
+#object class
+class(PlantGrowth)
+
+#object storage mode
+typeof(PlantGrowth)
+
+```
+
+
+##### Data Structures
+
+* vector
+* factor
+* data frame
+* matrix
+* list 
+
+
+R is a great tool that more plant breeders can use to conduct their analysis. R can be used to explore your data before performing more specific analysis. You can easily get descriptive statistics or make exploratory plots to show data distribute or variance. You can also conduct Analysis of Variance (ANOVA), Principal Component Analysis (PCA), and create AMMI Biplots & GGE Biplots. 
+
+
+
+
+
+
 
