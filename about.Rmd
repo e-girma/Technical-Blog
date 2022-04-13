@@ -1,5 +1,7 @@
 ---
-title: "Ellena Girma"
+title: "About Ellena Girma"
+#image: "Accepting Diploma.jpeg"
+image: "Ellena_Philly2.jpg"
 description: |
    Blog goals and my background.
 links: 
