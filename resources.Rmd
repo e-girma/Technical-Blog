@@ -33,7 +33,10 @@ Since most of my blog posts will be about using R for plant breeding specificall
 
 ### Package Specific Resources
 
-* Main page for the <a href = "https://ggplot2.tidyverse.org/"> ggplot2 </a> package. 
+* <a href = "https://ggplot2.tidyverse.org/"> ggplot2 </a>.
+* <a href = "https://www.tidyverse.org/packages/">tidyverse</a>.
+
+
 
 
 

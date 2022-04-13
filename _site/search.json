@@ -21,8 +21,8 @@
       "title": "Resources",
       "description": "Here are links to outside resources I've found helpful as I learn how to use R for Plant Breeding & agrobiodiversity.\n",
       "author": [],
-      "contents": "\r\n\r\nContents\r\nSetting Up R\r\nDownloading R & RStudio\r\nR Studio’s Interface\r\n\r\nUsing R: Basics\r\nGeneral Resources\r\nPackage Specific Resources\r\n\r\n\r\nSetting Up R\r\nDownloading new software or programs can be an overwhelming task. This page has some resources that can help you get R set up.\r\nDownloading R & RStudio\r\nIt is recommended that you use R on RStudio’s environment. So you will need to download both R and RStudio. A great video resource that takes you through the setup is Shashank Kalanithi’s Data Analyst Setup for Productivity (Python, R, SQL). Minutes 22:40 - 25:00 are what you’ll want to watch to set up your R environment.\r\nR Studio’s Interface\r\nR Studio has four windows that help organize your view as you work through your data analysis process. To get familiar with RStudio’s interface, I suggest watching RStudio for the Total Beginner. The tutorial focuses on how to navigate to and use each window.\r\nUsing R: Basics\r\nSince most of my blog posts will be about using R for plant breeding specifically, I wanted to share some external resources that you can use to get more familiar with R functions and uses.\r\nGeneral Resources\r\n RDocumentation  is a great site to search up R packages and functions.\r\n RStudio Cheatsheets  shares downloadable cheatsheets for many widely used packages that will help you figure out what functions in that package do.\r\nPackage Specific Resources\r\nMain page for the  ggplot2  package.\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-10T18:35:38+03:00"
+      "contents": "\r\n\r\nContents\r\nSetting Up R\r\nDownloading R & RStudio\r\nR Studio’s Interface\r\n\r\nUsing R: Basics\r\nGeneral Resources\r\nPackage Specific Resources\r\n\r\n\r\nSetting Up R\r\nDownloading new software or programs can be an overwhelming task. This page has some resources that can help you get R set up.\r\nDownloading R & RStudio\r\nIt is recommended that you use R on RStudio’s environment. So you will need to download both R and RStudio. A great video resource that takes you through the setup is Shashank Kalanithi’s Data Analyst Setup for Productivity (Python, R, SQL). Minutes 22:40 - 25:00 are what you’ll want to watch to set up your R environment.\r\nR Studio’s Interface\r\nR Studio has four windows that help organize your view as you work through your data analysis process. To get familiar with RStudio’s interface, I suggest watching RStudio for the Total Beginner. The tutorial focuses on how to navigate to and use each window.\r\nUsing R: Basics\r\nSince most of my blog posts will be about using R for plant breeding specifically, I wanted to share some external resources that you can use to get more familiar with R functions and uses.\r\nGeneral Resources\r\n RDocumentation  is a great site to search up R packages and functions.\r\n RStudio Cheatsheets  shares downloadable cheatsheets for many widely used packages that will help you figure out what functions in that package do.\r\nPackage Specific Resources\r\n ggplot2 .\r\ntidyverse.\r\n\r\n\r\n\r\n",
+      "last_modified": "2022-04-13T16:16:25+03:00"
     },
     {
       "path": "workshops.html",
@@ -30,7 +30,7 @@
       "description": "Here are the resources and learning materials for the workshops I've hosted at CIAT. \n",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2022-04-13T16:01:05+03:00"
+      "last_modified": "2022-04-13T16:02:13+03:00"
     }
   ],
   "collections": ["posts/posts.json", "Workshops/Workshops.json"]
