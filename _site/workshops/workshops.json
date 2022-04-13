@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "path": "Workshops/2022-03-18-gxe-past-paper-analysis/",
+    "title": "GxE Past Paper Summary & Analysis",
+    "description": "A summary & analysis of a past paper on GxE Interaction and Stability in Three Agro-ecologies in Tanzania presented this to Dr. Teshale and fellow colleagues Leah, Ombeni, and Anne. .",
+    "author": [
+      {
+        "name": "Ellena Girma",
+        "url": "https://rforplantbreeders.netlify.app/about.html"
+      }
+    ],
+    "date": "2022-03-18",
+    "categories": [],
+    "contents": "\r\nWorkshop 1\r\nTo learn more about GxE Interaction analysis, I picked a paper and did a summary presentation. I chose  Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania  as it would give me a good understanding of common bean production and productivity in Tanzania.\r\nHere is the  slide deck  I made for the presentation. I presented this to Dr. Teshale and fellow colleagues Leah, Ombeni, and Anne.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-04-13T16:02:12+03:00",
+    "input_file": "gxe-past-paper-analysis.knit.md"
+  }
+]
