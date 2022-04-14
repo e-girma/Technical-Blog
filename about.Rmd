@@ -5,6 +5,8 @@ image: "Ellena_Philly2.jpg"
 description: |
    Blog goals and my background.
 links: 
+  - label: Email
+    url: "mailto:egirma2730@gmail.com"
   - label: LinkedIn
     url: "https://www.linkedin.com/in/ellena-girma-90a42719b/"
   - label: Github
@@ -19,3 +21,4 @@ I am a data analyst intern at The International Center for Tropical Agriculture(
 
 I graduated from La Salle University in Philadelphia in 2021 with a B.S. in Integrated Science Business & Technology (ISBT). Being an ISBT major taught me to view my skillset as a toolbox and use various tools from different fields to solve a problem. As I discovered more skills to add to my toolbox, I found data visualization. I was immediately interested in learning how to visualize and share scientific work in a clear & concise manner. In exploring data viz, I made my way into the broader field of data science and analytics.
 
+This is a site made with R Markdown, the distill R package, the postcards R package, and deployed to Netlify.

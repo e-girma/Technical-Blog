@@ -1,0 +1,19 @@
+---
+title: "Importing Data into R"
+draft: true
+description: |
+  In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis.
+author:
+  - name: Ellena Girma
+    url: https://rforplantbreeders.netlify.app/about.html
+date: 2022-04-27
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
