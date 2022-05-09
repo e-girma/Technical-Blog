@@ -89,35 +89,35 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--radix_placeholder_meta_tags-->
   <title>Importing Data into R</title>
 
-  <meta property="description" itemprop="description" content="In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis."/>
+  <meta property="description" itemprop="description" content="Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I&#39;ll cover how to import data into R from the most common sources/file types."/>
 
 
   <!--  https://schema.org/Article -->
-  <meta property="article:published" itemprop="datePublished" content="2022-04-27"/>
-  <meta property="article:created" itemprop="dateCreated" content="2022-04-27"/>
+  <meta property="article:published" itemprop="datePublished" content="2022-05-09"/>
+  <meta property="article:created" itemprop="dateCreated" content="2022-05-09"/>
   <meta name="article:author" content="Ellena Girma"/>
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
   <meta property="og:title" content="Importing Data into R"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis."/>
+  <meta property="og:description" content="Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I&#39;ll cover how to import data into R from the most common sources/file types."/>
   <meta property="og:locale" content="en_US"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
   <meta property="twitter:title" content="Importing Data into R"/>
-  <meta property="twitter:description" content="In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis."/>
+  <meta property="twitter:description" content="Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I&#39;ll cover how to import data into R from the most common sources/file types."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","draft","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Importing Data into R"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis.\n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ellena Girma"]},{"type":"character","attributes":{},"value":["https://rforplantbreeders.netlify.app/about.html"]}]}]},{"type":"character","attributes":{},"value":["2022-04-27"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]}]}]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","draft","description","author","date","output"]}},"value":[{"type":"character","attributes":{},"value":["Importing Data into R"]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I'll cover how to import data into R from the most common sources/file types. \n"]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["Ellena Girma"]},{"type":"character","attributes":{},"value":["https://rforplantbreeders.netlify.app/about.html"]}]}]},{"type":"character","attributes":{},"value":["2022-05-09"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_depth"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[4]}]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["importing-data_files/anchor-4.2.2/anchor.min.js","importing-data_files/bowser-1.9.3/bowser.min.js","importing-data_files/distill-2.2.21/template.v2.js","importing-data_files/header-attrs-2.13/header-attrs.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.min.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.min.map","importing-data_files/popper-2.6.0/popper.min.js","importing-data_files/tippy-6.2.7/tippy-bundle.umd.min.js","importing-data_files/tippy-6.2.7/tippy-light-border.css","importing-data_files/tippy-6.2.7/tippy.css","importing-data_files/tippy-6.2.7/tippy.umd.min.js","importing-data_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["importing-data_files/anchor-4.2.2/anchor.min.js","importing-data_files/bowser-1.9.3/bowser.min.js","importing-data_files/clipboard-2.0.6/clipboard.min.js","importing-data_files/distill-2.2.21/template.v2.js","importing-data_files/font-awesome-5.1.0/css/all.css","importing-data_files/font-awesome-5.1.0/css/v4-shims.css","importing-data_files/font-awesome-5.1.0/webfonts/fa-brands-400.eot","importing-data_files/font-awesome-5.1.0/webfonts/fa-brands-400.svg","importing-data_files/font-awesome-5.1.0/webfonts/fa-brands-400.ttf","importing-data_files/font-awesome-5.1.0/webfonts/fa-brands-400.woff","importing-data_files/font-awesome-5.1.0/webfonts/fa-brands-400.woff2","importing-data_files/font-awesome-5.1.0/webfonts/fa-regular-400.eot","importing-data_files/font-awesome-5.1.0/webfonts/fa-regular-400.svg","importing-data_files/font-awesome-5.1.0/webfonts/fa-regular-400.ttf","importing-data_files/font-awesome-5.1.0/webfonts/fa-regular-400.woff","importing-data_files/font-awesome-5.1.0/webfonts/fa-regular-400.woff2","importing-data_files/font-awesome-5.1.0/webfonts/fa-solid-900.eot","importing-data_files/font-awesome-5.1.0/webfonts/fa-solid-900.svg","importing-data_files/font-awesome-5.1.0/webfonts/fa-solid-900.ttf","importing-data_files/font-awesome-5.1.0/webfonts/fa-solid-900.woff","importing-data_files/font-awesome-5.1.0/webfonts/fa-solid-900.woff2","importing-data_files/header-attrs-2.13/header-attrs.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.min.js","importing-data_files/jquery-3.6.0/jquery-3.6.0.min.map","importing-data_files/popper-2.6.0/popper.min.js","importing-data_files/tippy-6.2.7/tippy-bundle.umd.min.js","importing-data_files/tippy-6.2.7/tippy-light-border.css","importing-data_files/tippy-6.2.7/tippy.css","importing-data_files/tippy-6.2.7/tippy.umd.min.js","importing-data_files/webcomponents-2.0.0/webcomponents.js","importing-data_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css","importing-data_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1439,6 +1439,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="importing-data_files/header-attrs-2.13/header-attrs.js"></script>
+  <script src="importing-data_files/clipboard-2.0.6/clipboard.min.js"></script>
+  <link href="importing-data_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+  <script src="importing-data_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+  <script>window.xaringanExtraClipboard(null, {"button":"<i class=\"fa fa-clone fa-2x\" style=\"color: #301e64\"><\/i>","success":"<i class=\"fa fa-check fa-2x\" style=\"color: #90BE6D\"><\/i>","error":"<i class=\"fa fa-times fa-2x\" style=\"color: #F94144\"><\/i>"})</script>
+  <link href="importing-data_files/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+  <link href="importing-data_files/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
   <script src="importing-data_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
   <script src="importing-data_files/popper-2.6.0/popper.min.js"></script>
   <link href="importing-data_files/tippy-6.2.7/tippy.css" rel="stylesheet" />
@@ -1459,7 +1465,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Importing Data into R","description":"In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis.","authors":[{"author":"Ellena Girma","authorURL":"https://rforplantbreeders.netlify.app/about.html","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-04-27T00:00:00.000+03:00","citationText":"Girma, 2022"}
+{"title":"Importing Data into R","description":"Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I'll cover how to import data into R from the most common sources/file types.","authors":[{"author":"Ellena Girma","authorURL":"https://rforplantbreeders.netlify.app/about.html","affiliation":"&nbsp;","affiliationURL":"#","orcidID":""}],"publishedDate":"2022-05-09T00:00:00.000+03:00","citationText":"Girma, 2022"}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -1472,17 +1478,203 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>Importing Data into R</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>In this blog post, I give some tips for importing data in R and setting data up for exploratory data analysis.</p></p>
+<p><p>Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I’ll cover how to import data into R from the most common sources/file types.</p></p>
 </div>
 
 <div class="d-byline">
   Ellena Girma <a href="https://rforplantbreeders.netlify.app/about.html" class="uri">https://rforplantbreeders.netlify.app/about.html</a> 
   
-<br/>2022-04-27
+<br/>2022-05-09
 </div>
 
 <div class="d-article">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="d-contents d-contents-float">
+<nav class="l-text toc figcaption" id="TOC">
+<h3>Contents</h3>
+<ul>
+<li><a href="#some-things-to-take-care-of-before-we-start-importing">Some things to take care of before we start importing</a></li>
+<li><a href="#data">Data</a></li>
+<li><a href="#r-workspace">R Workspace</a>
+<ul>
+<li><a href="#working-directory">Working Directory</a></li>
+</ul></li>
+<li><a href="#other-things-to-remember">Other Things to Remember!</a></li>
+<li><a href="#structure-and-format-of-your-data">Structure and Format of Your Data</a></li>
+<li><a href="#excel-files">Excel files</a>
+<ul>
+<li><a href="#xlconnect">XLConnect</a></li>
+<li><a href="#readxl">readxl</a></li>
+</ul></li>
+<li><a href="#csv-and-txt-files">CSV and TXT files</a>
+<ul>
+<li><a href="#utils-package">utils package</a>
+<ul>
+<li><a href="#csv-files-using-utils">CSV files using utils</a></li>
+<li><a href="#txt-files-using-utils">TXT files using utils</a></li>
+</ul></li>
+<li><a href="#readr-package">readr package</a></li>
+</ul></li>
+<li><a href="#web-sources">Web Sources</a>
+<ul>
+<li><a href="#csv-and-txt-files-from-web-using-readr-package">csv and txt files from web using readr package</a></li>
+<li><a href="#excel-files-from-web-using-utils-package">excel files from web using utils package</a></li>
+</ul></li>
+<li><a href="#bonus-links">Bonus Links</a></li>
+</ul>
+</nav>
+</div>
+<p>Usually, people start off with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog I’ll cover how to import data into R from the most common sources/file types.</p>
+<h3 id="some-things-to-take-care-of-before-we-start-importing">Some things to take care of before we start importing</h3>
+<h3 id="data">Data</h3>
+<p>If you have locally saved data ready to be imported, make sure you know the location of the folder. If you don’t have access to data right now but still want to practice, I suggest using data from <a href = "https://www.sciencedirect.com/science/article/pii/S2405844021000785">this</a> paper. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed under Appendix A. Supplementary data.</p>
+<h3 id="r-workspace">R Workspace</h3>
+<p>Make sure your RStudio workspace is either cleared or you’re starting off in a new session. For a new session, click the Session tab and choose ‘New Session’. If you want to clear your workspace without opening a new session, go to the Environment tab on the top-right window. Then, click the broom icon to clear your environment.</p>
+<h4 id="working-directory">Working Directory</h4>
+<p>Next, if your data is saved locally, you can set your working directory to the folder in which you saved your data. Set your working directory by using the function setwd(“localfilepath”).</p>
+<h3 id="other-things-to-remember">Other Things to Remember!</h3>
+<ul>
+<li><p>Assign names to imported data. It will make it easier to call on the data within other functions. You can assign names by using R’s assignment operator.</p></li>
+<li><p>Do not assign the same name to more than one object.</p></li>
+<li><p>When assigning names, you can use letters, numbers, periods or underscores. However, the variable name needs to start with a letter or a dot not followed by a number.</p></li>
+<li><p>Make sure to include comments (using # before the comment) in your code so you can remember what your code does.</p></li>
+<li><p>Use install.packages() to install the packages you do not have.</p></li>
+<li><p>Use library() to load all packages into your current environment.</p></li>
+</ul>
+<h2 id="structure-and-format-of-your-data">Structure and Format of Your Data</h2>
+<p>To import data into R, it’s important to know what file type you are starting off with. The most common data file types are excel files, csv files, text files. The data you want to work with might also be on the web. Once you know what kind of data you’re starting off with, you can install and load the corresponding package.</p>
+<h2 id="excel-files">Excel files</h2>
+<p>For excel files, you can use the <a href = "https://www.rdocumentation.org/packages/XLConnect/versions/1.0.5">XLConnect</a> package or package the <a href = "https://readxl.tidyverse.org/">readxl</a> .</p>
+<h3 id="xlconnect">XLConnect</h3>
+<p>XLConnect lets you work on excel through R’s interface. Using XLConnect, you can create or load an existing workbook. Then, you can read data from one of the excel sheets or input your own data into a worksheet. Below, I show how to load in an existing workbook, get names of the sheets in the workbook, then read data from a worksheet in the workbook.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#load the package into R session</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://mirai-solutions.ch'>XLConnect</a></span><span class='op'>)</span>
+
+<span class='co'>#setting file path to an object</span>
+<span class='va'>file_path_xl</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Users/eruph/Documents/TB/Importing_Blog/workbook.xlsx"</span>
+
+<span class='co'>#create connection to an existing excel file to R using file path object</span>
+<span class='va'>wb</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/XLConnect/man/loadWorkbook.html'>loadWorkbook</a></span><span class='op'>(</span><span class='va'>file_path_xl</span>, create <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='co'>#set create = TRUE if you want to create a new file</span>
+
+<span class='co'>#get names of all worksheets in your workbook</span>
+<span class='fu'><a href='https://rdrr.io/pkg/XLConnect/man/getSheets-methods.html'>getSheets</a></span><span class='op'>(</span><span class='va'>wb</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;Sheet1&quot; &quot;Sheet2&quot;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#reading data from worksheet 2 specifying start &amp; end of cols &amp; rows</span>
+<span class='va'>wb_2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/XLConnect/man/readWorksheet-methods.html'>readWorksheet</a></span><span class='op'>(</span><span class='va'>wb</span>, sheet <span class='op'>=</span> <span class='st'>"Sheet2"</span>, startRow <span class='op'>=</span> <span class='fl'>3</span>, startCol <span class='op'>=</span> <span class='fl'>1</span>, endRow <span class='op'>=</span> <span class='fl'>15</span>, endCol <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="readxl">readxl</h3>
+<p>The readxl package can be used to load data from .xls and .xlsx formats. Below I load and xls file and an xlsx file using the read_excel() and real_xlsx() functions.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#load the package into R session</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='https://readxl.tidyverse.org'>readxl</a></span><span class='op'>)</span>
+
+<span class='co'>#setting file path</span>
+<span class='va'>file_path_xls</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Users/eruph/Documents/TB/Importing_Blog/read.xls"</span>
+
+<span class='co'>#importing .xls or .xlsx into R</span>
+<span class='va'>xls_data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_excel</a></span><span class='op'>(</span>path <span class='op'>=</span> <span class='va'>file_path_xls</span>, sheet <span class='op'>=</span> <span class='fl'>1</span>, col_names <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span>
+
+<span class='co'>#list sheet names in the excel file</span>
+<span class='fu'><a href='https://readxl.tidyverse.org/reference/excel_sheets.html'>excel_sheets</a></span><span class='op'>(</span><span class='va'>file_path_xls</span><span class='op'>)</span>
+</code></pre>
+</div>
+<pre><code>[1] &quot;Sheet1&quot; &quot;Sheet2&quot; &quot;Sheet3&quot;</code></pre>
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#setting file path</span>
+<span class='va'>file_path_xlsx</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Users/eruph/Documents/TB/Importing_Blog/read2.xlsx"</span>
+
+<span class='co'>#reading data from specific cells (example, cells F3 to H12)</span>
+<span class='va'>data</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://readxl.tidyverse.org/reference/read_excel.html'>read_xlsx</a></span><span class='op'>(</span><span class='va'>file_path_xlsx</span>, sheet <span class='op'>=</span> <span class='fl'>3</span>, range <span class='op'>=</span> <span class='st'>'F3:H12'</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="csv-and-txt-files">CSV and TXT files</h2>
+<p>CSV files separate information using commas or semi colons while TXT files use tabs to separate information. I have grouped csv and txt files together because they can be imported by using either the utils package or the readr package.</p>
+<h3 id="utils-package">utils package</h3>
+<h4 id="csv-files-using-utils">CSV files using utils</h4>
+<p>For csv files, you should know whether your file is separated by commas or semicolons. Use read.csv() if your file is comma separated and read.csv2() if it is semi colon separated.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#setting file path</span>
+<span class='va'>file_path_csv</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Users/eruph/Documents/TB/Importing_Blog/csvfile.csv"</span>
+
+<span class='co'>#reading data while specifying the the data is comma separated and that the first row has header names</span>
+<span class='va'>csv_df</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.csv</a></span><span class='op'>(</span><span class='va'>file_path_csv</span>, header <span class='op'>=</span> <span class='cn'>TRUE</span>, sep <span class='op'>=</span> <span class='st'>","</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<h4 id="txt-files-using-utils">TXT files using utils</h4>
+<p>To read txt files using utils, you can use the read.table() or the read.delim() functions.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#setting file path</span>
+<span class='va'>file_path_txt</span> <span class='op'>&lt;-</span> <span class='st'>"C:/Users/eruph/Documents/TB/Importing_Blog/environment_txt.txt"</span>
+
+<span class='co'>#importing file with the first row as variable names and add blank field/s to rows with missing values</span>
+<span class='va'>environment_txt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/read.table.html'>read.table</a></span><span class='op'>(</span><span class='va'>file_path_txt</span>, header <span class='op'>=</span> <span class='cn'>TRUE</span>, sep <span class='op'>=</span> <span class='st'>""</span>, fill <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span>
+</code></pre>
+</div>
+</div>
+<p>read.table() and read.delim() from the utils package can be used for other file types. As shown above, I used read.table() for importing a text file. However, it can also be used to import a csv files. When using these two functions, make sure you take a look at the sep (separator) argument. The sep argument value should be what is used to separate information in the document type you are importing.</p>
+<p><a href = "https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/read.table">R documentation</a> is a great resource to learn more about more about utils functions. You can also run ?function_name() to get more information about a function within RStudio.</p>
+<h3 id="readr-package">readr package</h3>
+<p>The <a href = "https://readr.tidyverse.org/">readr</a> package loads data faster than the utils package.All of readr’s import functions start with read_ and are followed by the file format type. Here are some examples:</p>
+<ul>
+<li>read_csv(): comma-separated values (CSV) files</li>
+<li>read_tsv(): tab-separated values (TSV) files</li>
+<li>read_delim(): delimited files (CSV and TSV are important special cases)</li>
+</ul>
+<p>Check out the <a href = "https://readr.tidyverse.org/">readr</a> page to get a more detailed look at the package.</p>
+<h2 id="web-sources">Web Sources</h2>
+<p>Sometimes, the data you need will be on the web. The readr and utlis packages can be used to get csv, txt and excel format data from the web.</p>
+<h3 id="csv-and-txt-files-from-web-using-readr-package">csv and txt files from web using readr package</h3>
+<p>To import csv and txt files using the readr package, pass the web link into either the read_csv() or the read_tsv() function. Take a look at the example code below.</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#assign the link to an object</span>
+<span class='va'>url_csv</span> <span class='op'>&lt;-</span> <span class='st'>"http://link.csv"</span>
+
+<span class='co'>#call object with link to import the data</span>
+<span class='co'>#data_web &lt;- read_csv(url_csv)</span>
+
+<span class='co'>#assign the link to an object</span>
+<span class='va'>url_delim</span> <span class='op'>&lt;-</span> <span class='st'>"http://link.txt"</span>
+
+<span class='co'>#call object with link to import the data</span>
+<span class='co'>#data_web &lt;- read_tsv(url_delim)</span>
+</code></pre>
+</div>
+</div>
+<h3 id="excel-files-from-web-using-utils-package">excel files from web using utils package</h3>
+<p>To import excel files from the web, use the utils package. You will first need to download the file using download.file(), then you can read the file using read_excel().</p>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode">
+<pre class="sourceCode r"><code class="sourceCode r"><span class='co'>#download.file(url, destfile = destination_path)</span>
+<span class='co'>#web_excel &lt;- read_excel(destination_path)</span>
+</code></pre>
+</div>
+</div>
+<h2 id="bonus-links">Bonus Links</h2>
+<p>In case this blog post did not cover the data source you used, please check out some of the resources I have listed below. Hopefully one of them will cover your data source.</p>
+<ul>
+<li><p>json files from web sources using the <a href = "https://cran.r-project.org/web/packages/jsonlite/jsonlite.pdf">jsonlite</a> package</p></li>
+<li><p><a href = "https://msberends.github.io/AMR/articles/SPSS.html">SAS/SPSS/Stata</a> files using the <a href = "https://haven.tidyverse.org/">haven</a> package</p></li>
+<li><p>Additionally, if you want to practice some R code on importing flat files, such as csv and delimited files, try out the first free chapter on DataCamp’s <a href = "https://www.datacamp.com/courses/importing-data-in-r-part-1">Importing Data in R</a> course.</p></li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>‘’Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973’’<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
