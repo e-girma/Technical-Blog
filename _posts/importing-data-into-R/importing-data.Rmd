@@ -1,0 +1,226 @@
+---
+title: "Importing Data into R"
+draft: false
+description: |
+  Usually, people start with data in different file types. In R, file types tend to require their own importing functions. In this post, I will cover how to import data into R from the most common file types.  
+author:
+  - name: Ellena Girma
+    url: https://rforplantbreeders.netlify.app/about.html
+date: 2022-05-11
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 4
+---
+
+```{r, options, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, 
+                      message = FALSE, 
+                      warning = FALSE,
+                      R.options	= list(width = 70))
+```
+
+
+Usually, people start with data in different file types. This can make importing data feel overwhelming since different file types tend to require their own function. In this blog, I'll cover how to import data into R from the most common file types. 
+
+### Some things to take care of before we start importing 
+### Data 
+
+If you have locally saved data ready to be imported, make sure you know the folder's location. If you don't have access to data right now but still want to practice, I suggest using data from <a href = "https://www.sciencedirect.com/science/article/pii/S2405844021000785">this</a> paper. ^[''Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973''
+] The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant, and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed in Appendix A. Supplementary data. 
+
+
+### R Workspace
+
+Make sure you clear your RStudio environment, or you have opened a new session. To open a new session, go to the Session tab and choose New Session. If you want to clear your workspace without opening a new session, go to the Environment tab on the top-right window. Then, click the broom icon to clear your environment. 
+
+#### Working Directory 
+
+Your working directory is where R will look for files you want to import. I suggest setting your working directory to the folder that has your data. Set your working directory using the function setwd("localfilepath"). Setting your working directory is also useful when you want to save files in a specific folder.
+
+R can also import files from folders that have not been set as the working directory. To do this, specify the folder's file path in the importing function. 
+
+
+### Other Things to Remember!
+
+* Assign names to imported data. It will make it easier to call on the data within other functions. You can assign names by using R's assignment operator.
+
+* Do not assign the same name to more than one object.
+
+* When assigning names, you can use letters, numbers, periods, or underscores. However, the variable name needs to start with a letter or a dot not followed by a number.
+
+* Make sure to include comments (using # before the comment) in your code so you can remember what your code does.
+* Use install.packages() to install the packages you do not have. 
+
+* Use library() to load all packages into your current environment. 
+
+## Structure and Format of Your Data
+
+To import data into R, it's important to know what file type you are starting with. Once you know what kind of data you're starting with, you can install and load the corresponding package. The most common data file types are excel files, CSV files, and TXT files. The data you want to work with might also be on the web.
+
+## Excel files
+
+For excel files, you can use the <a href = "https://www.rdocumentation.org/packages/XLConnect/versions/1.0.5">XLConnect</a> package or package  the <a href = "https://readxl.tidyverse.org/">readxl</a> . 
+
+### XLConnect
+
+XLConnect lets you work on excel through R's interface. Using XLConnect, you can create or load an existing workbook. Then, you can read data from one of the excel sheets or input data from R into a worksheet. Below, I show how to load in an existing workbook, get the names of the sheets in the workbook, then read data from a worksheet in the workbook. 
+
+```{r, XLConnect} 
+#load the package into R session
+library(XLConnect)
+
+#setting file path to an object
+file_path_xl <- "C:/Users/eruph/Documents/TB/Importing_Blog/workbook.xlsx"
+
+#create connection to an existing excel file to R using file path object
+wb <- loadWorkbook(file_path_xl, create = FALSE) #set create = TRUE if you want to create a new file
+
+#get names of all worksheets in your workbook
+getSheets(wb)
+
+#reading data from worksheet 2 specifying start & end of cols & rows
+wb_2 <- readWorksheet(wb, sheet = "Sheet2", startRow = 3, startCol = 1, endRow = 15, endCol = 3)
+
+```
+
+### readxl
+
+The readxl package can be used to load data from .xls and .xlsx formats. Below I load and xls file and an xlsx file using the read_excel() and real_xlsx() functions. 
+
+```{r, readxl} 
+#load the package into R session
+library(readxl)
+
+#setting file path
+file_path_xls <- "C:/Users/eruph/Documents/TB/Importing_Blog/read.xls"
+
+#importing .xls or .xlsx into R
+xls_data <- read_excel(path = file_path_xls, sheet = 1, col_names = TRUE)
+
+#list sheet names in the excel file
+excel_sheets(file_path_xls)
+
+#setting file path
+file_path_xlsx <- "C:/Users/eruph/Documents/TB/Importing_Blog/read2.xlsx"
+
+#reading data from specific cells (example, cells F3 to H12)
+data <- read_xlsx(file_path_xlsx, sheet = 3, range = 'F3:H12')
+
+```
+
+
+## CSV and TXT files
+
+CSV files separate information using commas or semi-colons, while TXT files use tabs to separate information. I have grouped CSV and TXT files together because they can be imported using either the utils package or the readr package.
+
+### utils package
+
+#### CSV files using utils
+
+For CSV files, check if your file is separated by commas or semicolons. Use read.csv() if your file is comma-separated and read.csv2() if it is semi semicolon-separated.
+
+```{r, csv-files}
+
+#setting file path
+file_path_csv <- "C:/Users/eruph/Documents/TB/Importing_Blog/csvfile.csv"
+
+#reading data while specifying the the data is comma separated and that the first row has header names
+csv_df <- read.csv(file_path_csv, header = TRUE, sep = ",")
+
+```
+
+#### TXT files using utils
+
+To read TXT files using utils, you can use the read.table() or the read.delim() functions. 
+
+```{r, text-files}
+#setting file path
+file_path_txt <- "C:/Users/eruph/Documents/TB/Importing_Blog/environment_txt.txt"
+
+#importing file with the first row as variable names and add blank field/s to rows with missing values
+environment_txt <- read.table(file_path_txt, header = TRUE, sep = "", fill = T)
+
+```
+
+read.table() and read.delim() from the utils package can be used for other file types. As shown above, I used read.table() for importing a text file. However, it can also be used to import CSV files. When using these two functions, look at the sep (separator) argument. Assign the character used to separate information in the document type you are importing to the sep argument.
+
+<a href = "https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/read.table">R documentation</a> is a great resource to learn more about more about utils functions. You can also run ?function_name() to get more information about a function within RStudio. 
+
+### readr package
+
+The <a href = "https://readr.tidyverse.org/">readr</a> package loads data faster than the utils package. All of readr's import functions start with read_ and are followed by the file format type. Here are some examples: 
+
+* read_csv(): comma-separated values (CSV) files
+* read_tsv(): tab-separated values (TSV) files
+* read_delim(): delimited files
+
+Check out the <a href = "https://readr.tidyverse.org/">readr</a> page to get a more detailed look at the package. 
+
+## Web Sources
+
+Sometimes, the data you need will be on the web. The readr and utlis packages can be used to get CSV, TXT and excel format data from the web. 
+
+### CSV and TXT files from web using readr package
+
+To import CSV and txt files using the readr package, pass the web link into either the read_csv() or the read_tsv() function. Take a look at the example code below. 
+
+```{r, web-sources-1}
+
+#assign the link to an object
+url_csv <- "http://link.csv"
+
+#call object with link to import the data
+#data_web <- read_csv(url_csv)
+
+#assign the link to an object
+url_delim <- "http://link.txt"
+
+#call object with link to import the data
+#data_web <- read_tsv(url_delim)
+
+```
+
+### excel files from web using utils package
+
+To import excel files from the web, use the utils package. First download the file using
+download.file(), then read the file using read_excel(). 
+
+```{r, web-sources-2}
+
+#download.file(url, destfile = destination_path)
+#web_excel <- read_excel(destination_path)
+
+```
+
+## Bonus Links
+
+Incase this blog post did not cover the data source you used, please check out some of the resources I have listed below. Hopefully, one of them will cover your data source. 
+
+* json files from web sources using the <a href = "https://cran.r-project.org/web/packages/jsonlite/jsonlite.pdf">jsonlite</a> package
+
+* <a href = "https://msberends.github.io/AMR/articles/SPSS.html">SAS/SPSS/Stata</a> files using the <a href = "https://haven.tidyverse.org/">haven</a> package
+
+* Additionally, if you want to practice some R code on importing flat files, such as csv and delimited files, try out the first free chapter on DataCamp's <a href = "https://www.datacamp.com/courses/importing-data-in-r-part-1">Importing Data in R</a> course. 
+
+```{r, xaringanExtra-clipboard, include=FALSE}
+htmltools::tagList(
+  xaringanExtra::use_clipboard(
+    button_text = "<i class=\"fa fa-clone fa-2x\" style=\"color: #301e64\"></i>",
+    success_text = "<i class=\"fa fa-check fa-2x\" style=\"color: #90BE6D\"></i>",
+    error_text = "<i class=\"fa fa-times fa-2x\" style=\"color: #F94144\"></i>"
+  ),
+  rmarkdown::html_dependency_font_awesome()
+)
+```
+
+<center>Visitors<center>
+<center>
+<div id="sfcz5h8hlhjuffdc9xz44mwl75csnqlmz9a"></div><script type="text/javascript" src="https://counter9.stat.ovh/private/counter.js?c=z5h8hlhjuffdc9xz44mwl75csnqlmz9a&down=async" async></script><noscript><a href="https://www.freecounterstat.com" title="free counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=z5h8hlhjuffdc9xz44mwl75csnqlmz9a" border="0" title="free counter" alt="free counter"></a></noscript>
+</div><center>
+
+### Last updated on {.appendix}
+```{r,echo=FALSE}
+Sys.time()
+```

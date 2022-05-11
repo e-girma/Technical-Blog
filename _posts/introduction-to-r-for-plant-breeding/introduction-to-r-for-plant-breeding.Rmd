@@ -1,0 +1,179 @@
+---
+title: "Introduction to R For Plant Breeding"
+description: |
+  R is a great, open-source software for working with plant breeding data! Over the last year, I have been using R as my primary tool for data analysis. In this blog post, I give a quick introduction to R for plant breeders. 
+author:
+  - name: Ellena Girma
+    url: https://rforplantbreeders.netlify.app/about.html
+date: 2022-04-12
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_depth: 5
+---
+ 
+### Installing & Setting Up R
+
+To use R, you should download <a href = "https://cloud.r-project.org/">R</a> and <a href = "https://www.rstudio.com/products/rstudio/download/#download">RStudio</a>. 
+
+I have some resources linked on my <a href = "https://rforplantbreeders.netlify.app/resources.html"> resources</a> page that will help you get R and RStudio set up. You will also find some resources on getting yourself familiar with R Studio's Interface. 
+
+When you are ready to start working on your data, you should set your working directory to a specific folder. It should be where you have your data saved. Setting your working directory to this folder will also allow you to easily save any output files (like plots) to the same folder. 
+
+```{r, working-directory}
+
+#set working directory by adding file path like below 
+#setwd("C:/Users/eruph/Documents/Technical-Blog_EG/Technical-Blog/_posts/2022-03-18-introduction-to-r-for-plant-breeding")
+
+#check working directory
+getwd()
+
+```
+
+All code lines that start with a hash/number(#) sign are comment lines. Comments help you and others who read your code understand what that code line or section is doing. If you put the # in front of a code line, that code will not run. Putting # in front of a code line is helpful when testing what different lines of code do. 
+ 
+### Packages 
+
+Packages in R Studio are how you will access the functions you want to use/run. There are two main things you have to do when you want to use an R package:
+ 
+* Check if the package is installed; if not, install it
+* Once installed, load the package 
+
+There are two ways to install a package in R. The first way is by going to the 'Packages' tab on the bottom right window. The second way is to do it using code. Below is an example of installing and loading tidyverse, a collection of R packages.
+
+```{r, installing-and-loading-todyverse }
+
+#installing the tidyverse package
+#install.packages("tidyverse")
+# Loading tidverse for the session
+#library(tidyverse)
+
+```
+
+
+Some of the packages included in core tidyverse are: 
+
+* <a href = "https://ggplot2.tidyverse.org/index.html"> ggplot2 </a>: package useful for creating graphics
+* <a href = "https://dplyr.tidyverse.org/"> dplyr </a>: good for data manipulation
+* <a href = "https://tidyr.tidyverse.org/"> tidyr </a>: cleaning data 
+* <a href = "https://readr.tidyverse.org/"> readr </a>: reading rectangular data (each column is a variable and row is a record)
+
+Learn more about the tidyverse <a href = "https://www.tidyverse.org/packages/"> here </a>. 
+
+#### Plant Breeding Packages you should consider installing 
+
+* <a href = "https://github.com/TiagoOlivoto/metan"> metan </a> for multi-environmental data 
+* <a href = "https://cran.r-project.org/web/packages/statgenGxE/vignettes/statgenGxE.html"> statgenGxE </a> 
+* <a href = "https://cran.r-project.org/web/packages/statgenSTA/vignettes/statgenSTA.html"> statgenSTA</a> 
+* <a href = "https://cran.r-project.org/web/packages/lme4/lme4.pdf">lme4 </a> for multi-level models 
+* <a href = "https://zzlab.net/GAPIT/">gapit</a> for Genome Wide Association Study (GWAS) and Genomic Selection (GS)
+
+### Programming with R
+
+#### Basic Arithmetic
+
+In R, you can run mathematical operations & functions, logarithms, exponentials, etc. Below are some examples. When you run each line of code, the answer will be shown in the console window (bottom left window) of RStudio's interface.
+
+```{r, basic-arithmetic}
+
+12 + 2 #addition
+12 - 2 #subtraction
+12 * 2 #multiplication
+12 / 2 #division
+12 ^ 2 #exponentiation
+log2(16) #log
+sqrt(16) #square root
+
+```
+
+
+#### Assigning variables
+
+In R, you will often need to store values or an object because you want to use it in another function. This is called assigning. Assigning a value or object to a variable will save it in your environment to be used later. 
+
+```{r, variable-assignment}
+
+#Assigning value 4 to x
+x <- 4
+#Assigning value 6 to y
+y <- 6
+#Assigning z and using x & y
+z <- x + y
+
+#Assigning an example dataset from datasets base r to a variable 
+plant_growth <- datasets::PlantGrowth
+```
+
+
+
+#### Data Types and Structures 
+
+##### Basic Data Types in R
+
+* character: "text"
+* numeric: 12, 4.5 
+* integer: 2, 3
+* logical: TRUE, FALSE
+
+Use the function class() to check the data type of a saved object, column, or columns in the entire dataset.
+
+```{r, data-types}
+#calling first 6 rows of dataset loaded earlier
+head(plant_growth)
+
+#class of dataset
+class(plant_growth)
+
+#class of specific column in dataset called group 
+class(plant_growth$group)
+
+```
+
+
+##### Data Structures
+
+* Vectors are one-dimensional arrays that can only store one data type.
+* Matrices are two-dimensional tables.
+* Factors are used to store categorical data like eye color or plant variants/lines.
+* Data frames are data stored in table format where columns are variables and rows are records.
+* Lists: can hold different data types
+
+Use the function str() to check the data structure of an object. 
+
+```{r, data-structures }
+
+#vector 
+alphabet <- c("a", "b", "c", "d", "e", "f", "g")
+str(alphabet)
+
+#matrix
+matrix_1 <- matrix(c(5,6,7,8,9,10), nrow = 2, ncol = 3)
+str(matrix_1)
+
+#factor
+primary_colors <- factor( c("red", "yellow", "blue"))
+str(primary_colors)
+
+#data.frame
+data_frame_1 <- data.frame (
+  Variety = c("SCN 11", "Embean 11", "Jesca"),
+  Yield = c(1200, 1550, 1320),
+  Seed_weight = c(60, 30, 45)
+)
+str(data_frame_1)
+
+#list
+environments <- list("Arusha", "Lyamungu", "Uyole")
+str(environments)
+```
+
+
+R is a great tool that more plant breeders can use to conduct their analysis. R can be used to explore your data before performing more specific analysis. You can easily get descriptive statistics or make exploratory plots to show data distribute or variance. You can also conduct Analysis of Variance (ANOVA), Principal Component Analysis (PCA), and create AMMI Biplots & GGE Biplots. 
+
+
+
+
+
+
+
