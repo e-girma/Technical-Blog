@@ -1,0 +1,54 @@
+---
+title: "TARI Bean Program Workshop: GxE Analysis in R"
+draft: true
+description: |
+  Day x of the TARI Bean Program Training hosted by CIAT Arusha.
+author:
+  - name: Ellena Girma
+    url: "https://rforplantbreeders.netlify.app/about.html"
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+library(xaringanBuilder)
+library(pagedown)
+```
+
+
+### Welcome
+
+My name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be leading today's workshop on GxE Interaction and Stability Analysis. 
+
+The goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use R to run GxE Interaction and Stability Analysis.
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](gxe-analysis-June2022)"}
+xaringanExtra::embed_xaringan(url = "https://ellenagirma-workshops.netlify.app/gxe-june2022/", ratio = "8:5")
+```
+
+
+### Materials 
+
+#### R
+
+You will need to install R as well as the following packages:
+
+```{r installing-packages}
+
+#install.packages(c("tidyverse", "lme4", "metan"))
+
+```
+
+#### Data
+
+Feel free to use your own data if you have data available. If you need data to practice on, I suggest using data from <a href = "https://www.sciencedirect.com/science/article/pii/S2405844021000785">this</a> paper. ^[''Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973''
+] The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed under Appendix A. Supplementary data. 
+
