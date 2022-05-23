@@ -26,19 +26,13 @@ My name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be
 
 The goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use the metan pacakge in R to run GxE Interaction and Stability Analysis.
 
-<<<<<<< HEAD
 ```{r share-again}
 xaringanExtra::use_share_again()
 
 ```
 
-```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
+```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)", include=FALSE}
 xaringanExtra::embed_xaringan(url = "https://ellenagirma-workshops.netlify.app/gxe-june2022/index.html", ratio = "16:9")
-=======
-
-```{r embed-xaringan, echo=FALSE, fig.cap="[Slides](slides/index.html)"}
-xaringanExtra::embed_xaringan(url = "ellenagirma-workshops.netlify.app/gxe-june2022/index.html", ratio = "16:9")
->>>>>>> 8020e419905ad0c3a6d337551feaaf6fd6de8a18
 ```
 
 
@@ -46,11 +40,8 @@ xaringanExtra::embed_xaringan(url = "ellenagirma-workshops.netlify.app/gxe-june2
 
 #### Slides
 
-<<<<<<< HEAD
 <a href = "https://ellenagirma-workshops.netlify.app/gxe-june2022/">Slides</a>
-=======
-<a href = ""https://ellenagirma-workshops.netlify.app/gxe-june2022/>Slides</a>
->>>>>>> 8020e419905ad0c3a6d337551feaaf6fd6de8a18
+
 
 #### R
 
