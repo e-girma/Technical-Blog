@@ -9,11 +9,11 @@
         "url": "https://rforplantbreeders.netlify.app/about.html"
       }
     ],
-    "date": "2022-05-11",
+    "date": "2022-05-23",
     "categories": [],
-    "contents": "\r\nWelcome\r\nMy name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be leading today’s workshop on GxE Interaction and Stability Analysis.\r\nThe goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use R to run GxE Interaction and Stability Analysis.\r\n\r\n\r\n\r\n\r\n\r\n\r\nfitvids('.shareagain', {players: 'iframe'});\r\n\r\nMaterials\r\nR\r\nYou will need to install R as well as the following packages:\r\n\r\n\r\n\r\nData\r\nFeel free to use your own data if you have data available. If you need data to practice on, I suggest using data from this paper. 1 The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed under Appendix A. Supplementary data.\r\nSlides (pdf format?)\r\n\r\n‘’Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973’’↩︎\r\n",
+    "contents": "\r\nWelcome\r\nMy name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be leading today’s workshop on GxE Interaction and Stability Analysis.\r\nThe goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use the metan pacakge in R to run GxE Interaction and Stability Analysis.\r\n\r\n\r\n\r\n\r\n\r\n\r\nfitvids('.shareagain', {players: 'iframe'});\r\n\r\nMaterials\r\n<a href = \"\"https://ellenagirma-workshops.netlify.app/gxe-june2022/>Slides\r\nR\r\nYou will need to install R as well as the following packages:\r\n\r\n\r\n\r\nData\r\nFeel free to use your own data if you have data available.\r\nIf you need data to practice on, I suggest using data from this paper. 1 The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed under Appendix A. Supplementary data.\r\n\r\n‘’Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973’’↩︎\r\n",
     "preview": {},
-    "last_modified": "2022-05-11T14:48:56+03:00",
+    "last_modified": "2022-05-23T18:23:44+03:00",
     "input_file": "GxE-Analysis-in-R.knit.md"
   },
   {
