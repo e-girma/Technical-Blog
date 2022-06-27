@@ -1,0 +1,20 @@
+---
+title: "Guide to Analysis of Variance(ANOVA) in R"
+draft: true
+description: |
+  In this blog post, I give you a few tips on how to run an Analysis of Variance using R.
+author:
+  - name: Ellena Girma
+    url: "https://rforplantbreeders.netlify.app/about.html"
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(xaringan)
+library(xaringanExtra)
+library(xaringanthemer)
+library(xaringanBuilder)
+library(pagedown)
+```
