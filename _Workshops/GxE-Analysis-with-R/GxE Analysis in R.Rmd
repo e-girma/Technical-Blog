@@ -2,7 +2,7 @@
 title: "TARI Bean Program Workshop: GxE Analysis in R"
 draft: false
 description: |
-  Day x of the TARI Bean Program Training hosted by CIAT Arusha.
+  Day 2 of the TARI Bean Program Training hosted by CIAT Arusha.
 author:
   - name: Ellena Girma
     url: "https://rforplantbreeders.netlify.app/about.html"
@@ -15,7 +15,7 @@ library(tidyverse)
 library(xaringan)
 library(xaringanExtra)
 library(xaringanthemer)
-library(xaringanBuilder)
+library(renderthis)
 library(pagedown)
 ```
 
@@ -45,14 +45,12 @@ xaringanExtra::embed_xaringan(url = "https://ellenagirma-workshops.netlify.app/g
 
 #### R
 
-You will need to install R as well as the following packages:
+You will need to install R/RStudio* as well as the following packages:
 
-```{r installing-packages, eval=FALSE}
+* tidyverse
+* metan
 
-install.packages("tidyverse")
-install.packages("metan")
-
-```
+*Check out my <a href = "https://rforplantbreeders.netlify.app/resources.html">resources</a> page for video instructions on how to download R and RStudio. 
 
 #### Data
 

@@ -2,19 +2,19 @@
   {
     "path": "Workshops/GxE-Analysis-with-R/",
     "title": "TARI Bean Program Workshop: GxE Analysis in R",
-    "description": "Day x of the TARI Bean Program Training hosted by CIAT Arusha.",
+    "description": "Day 2 of the TARI Bean Program Training hosted by CIAT Arusha.",
     "author": [
       {
         "name": "Ellena Girma",
         "url": "https://rforplantbreeders.netlify.app/about.html"
       }
     ],
-    "date": "2022-05-23",
+    "date": "2022-07-10",
     "categories": [],
-    "contents": "\r\nWelcome\r\nMy name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be leading today’s workshop on GxE Interaction and Stability Analysis.\r\nThe goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use the metan pacakge in R to run GxE Interaction and Stability Analysis.\r\n\r\n\r\n\r\nMaterials\r\nSlides\r\nSlides\r\nR\r\nYou will need to install R as well as the following packages:\r\n\r\n\r\n\r\nData\r\nFeel free to use your own data if you have data available.\r\nIf you need data to practice on, I suggest using data from this paper. 1 The data contains information about the seed yield, 100 seed weight, number of seeds/pod, number of pods/plant and days to 75% flowering for 99 common bean variants grown in 3 locations. The data is listed under Appendix A. Supplementary data.\r\n\r\n‘’Philipo M, Ndakidemi PA, Mbega ER. Environmentally stable common bean genotypes for production in different agro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973. doi: 10.1016/j.heliyon.2021.e05973’’↩︎\r\n",
+    "contents": "\r\nWelcome\r\nMy name is Ellena Girma and I am a data analyst intern at CIAT\r\nArusha. I will be leading today’s workshop on GxE Interaction and\r\nStability Analysis.\r\nThe goal of this workshop is to give TARI Bean Project scientists and\r\ntechnicians an overview of how to use the metan pacakge in R to run GxE\r\nInteraction and Stability Analysis.\r\n\r\n\r\n\r\nMaterials\r\nSlides\r\nSlides\r\nR\r\nYou will need to install R/RStudio* as well as the following\r\npackages:\r\ntidyverse\r\nmetan\r\n*Check out my\r\nresources\r\npage for video instructions on how to download R and RStudio.\r\nData\r\nFeel free to use your own data if you have data available.\r\nIf you need data to practice on, I suggest using data from\r\nthis\r\npaper. 1 The data contains information about\r\nthe seed yield, 100 seed weight, number of seeds/pod, number of\r\npods/plant and days to 75% flowering for 99 common bean variants grown\r\nin 3 locations. The data is listed under Appendix A. Supplementary\r\ndata.\r\n\r\n‘’Philipo M, Ndakidemi PA, Mbega ER.\r\nEnvironmentally stable common bean genotypes for production in different\r\nagro-ecological zones of Tanzania. Heliyon. 2021 Jan 19;7(1):e05973.\r\ndoi: 10.1016/j.heliyon.2021.e05973’’↩︎\r\n",
     "preview": {},
-    "last_modified": "2022-05-23T18:49:42+03:00",
-    "input_file": "GxE-Analysis-in-R.knit.md"
+    "last_modified": "2022-07-10T11:56:11+03:00",
+    "input_file": {}
   },
   {
     "path": "Workshops/2022-03-18-gxe-past-paper-analysis/",
