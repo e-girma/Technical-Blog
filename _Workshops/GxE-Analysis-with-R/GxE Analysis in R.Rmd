@@ -1,12 +1,13 @@
 ---
-title: "TARI Bean Program Workshop: GxE Analysis in R"
+title: "Bean Program Workshop: GxE Analysis in R"
 draft: false
 description: |
-  Day 2 of the TARI Bean Program Training hosted by CIAT Arusha.
+  GxE Analysis in R Workshop hosted by CIAT Arusha. 
+  Updated `r Sys.Date()`
 author:
   - name: Ellena Girma
     url: "https://rforplantbreeders.netlify.app/about.html"
-date: "`r Sys.Date()`"
+date: July 10, 2022
 output: distill::distill_article
 ---
 ```{r setup, include=FALSE}
@@ -22,9 +23,9 @@ library(pagedown)
 
 ### Welcome
 
-My name is Ellena Girma and I am a data analyst intern at CIAT Arusha. I will be leading today's workshop on GxE Interaction and Stability Analysis. 
+My name is Ellena Girma and I am a breeding data systems and analytics specialist at the Alliance Bioversity International - CIAT.
 
-The goal of this workshop is to give TARI Bean Project scientists and technicians an overview of how to use the metan pacakge in R to run GxE Interaction and Stability Analysis.
+The goal of this workshop is to give CIAT Bean Program scientists and technicians an overview of how to use the metan pacakge in R to run GxE Interaction and Stability Analysis.
 
 ```{r share-again}
 xaringanExtra::use_share_again()
@@ -38,19 +39,28 @@ xaringanExtra::embed_xaringan(url = "https://ellenagirma-workshops.netlify.app/g
 
 ### Materials 
 
-#### Slides
+Below are the materials you need to follow the workshop:
 
-<a href = "https://ellenagirma-workshops.netlify.app/gxe-june2022/">Slides</a>
+#### <a href = "https://ellenagirma-workshops.netlify.app/gxe-june2022/">Slides</a>
 
-
-#### R
+#### Installing R & RStudio
 
 You will need to install R/RStudio* as well as the following packages:
 
 * tidyverse
 * metan
 
-*Check out my <a href = "https://rforplantbreeders.netlify.app/resources.html">resources</a> page for video instructions on how to download R and RStudio. 
+Check out my <a href = "https://rforplantbreeders.netlify.app/resources.html">resources</a> page for video instructions on how to download R and RStudio. 
+
+#### Project-Oriented Workflow
+
+It's best to organize your R code using R Projects. This way, all the materials related to an analysis/project will be under one parent folder but will be separated by content type (ex: data, scripts, outputs, reports, notes). All folders in this parent folder are easily accessed by the RProject. 
+
+Some resources on project oriented workflows in R:
+
+  * <a href = "https://rstats.wtf/project-oriented-workflow.html">What They Forgot to Teach You About R: "Project-oriented workflow" chapter by Jenny Bryan and Jim Hester</a>
+  * <a href = "https://r4ds.had.co.nz/workflow-projects.html">R for data science: "Workflow: projects" chapter by Hadley Wickham</a>
+  * <a href = "https://www.tidyverse.org/blog/2017/12/workflow-vs-script/">"Project-oriented workflow" blog post by Jenny Bryan</a>
 
 #### Data
 
